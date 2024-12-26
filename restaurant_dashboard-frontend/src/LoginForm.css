@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    to right,
+    #f4f6f9,
+    #dce4f7
+  ); /* Soft gradient background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the login form */
+.login-form-container {
+  max-width: 400px;
+  margin: 50px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* Smooth transition for shadow */
+}
+
+/* Form hover effect */
+.login-form-container:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+  transform: translateY(-5px); /* Slight upward movement */
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #6a5acd;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Input container */
+.input-container {
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+.input-container input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+/* Focus state for input fields */
+.input-container input:focus {
+  border-color: #6a5acd;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 90, 205, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Button styles */
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+/* Disabled button */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Send OTP Button */
+.otp-button {
+  background-color: #6a5acd;
+  color: white;
+}
+
+.otp-button:hover:enabled {
+  background-color: #5a4c9b;
+  transform: translateY(-2px); /* Slight hover lift */
+  box-shadow: 0 4px 15px rgba(106, 90, 205, 0.2);
+}
+
+/* Login Button */
+.login-button {
+  background-color: #00bfff;
+  color: white;
+}
+
+.login-button:hover:enabled {
+  background-color: #0099cc;
+  transform: translateY(-2px); /* Slight hover lift */
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 20px;
+}
+
+/* Input fields and button animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button hover effect */
+button:hover:enabled {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-container input {
+    font-size: 0.9rem;
+  }
+
+  .buttons-container button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
